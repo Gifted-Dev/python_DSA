@@ -51,27 +51,27 @@ class Linkedlist:
     # ---------------------------------------------------------------------
     
     # create a method to add an item to the beginning of the list
-    def insert_to_beginning(self, val):
+    def insert_to_beginning(self, data):
         
         """
         Steps to insert at the beginning of the list
-        - the function takes in a value, and creates a node with the val
+        - the function takes in a value, and creates a node with the data
         - The node points to the head of the list
         - And the node is assigned to become the head       
         """
         
         if self.head is None:
-            self.head = Node(val)
+            self.head = Node(data)
             return
         
-        node = Node(val, self.head)
+        node = Node(data, self.head)
         self.head = node
         
     # ------------------------------------------------------------------------
     # ------------------------------------------------------------------------
     
     # create a method to insert item to end of list
-    def insert_to_end(self, val):
+    def insert_to_end(self, data):
         """
         Steps taken to insert to the end of the list
         - check if the list is empty, then set list as head
@@ -80,14 +80,14 @@ class Linkedlist:
         - the point to the node
         """
         if self.head is None:
-            self.head = Node(val)
+            self.head = Node(data)
             return
         
         itr = self.head
         while itr.next:
            itr = itr.next
            
-        itr.next = Node(val)
+        itr.next = Node(data)
     
     # ----------------------------------------------------------------------
     # ----------------------------------------------------------------------
@@ -154,14 +154,14 @@ class Linkedlist:
         
             
     # Insert at any index of the list
-    def insert_at(self, index, val):        
+    def insert_at(self, index, data):        
         if self.head is None: # check if 
-            self.head = Node(val)
+            self.head = Node(data)
             return
         
         if index == 0:
-            # self.head = Node(val, self.head): this works too... 
-            self.insert_to_beginning(val)
+            # self.head = Node(data, self.head): this works too... 
+            self.insert_to_beginning(data)
             return
         
         count = 0
@@ -169,14 +169,12 @@ class Linkedlist:
         
         while itr.next:
             if count == index - 1:
-                itr.next = Node(val, itr.next)
+                itr.next = Node(data, itr.next)
                 return
             count += 1
             itr = itr.next
 
-         
-    # ----------------------------------------------------------------------
-    # ----------------------------------------------------------------------    
+    
         
     # Insert another list to the end of the list
     def insert_list_end(self, datalist):
