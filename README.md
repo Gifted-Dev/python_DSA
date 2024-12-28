@@ -8,9 +8,9 @@ This repository contains my learning of Data Structures and Algorithms in Python
 - problems: solutions to DSA related problems from different platforms.
 
 ## Progress
-- [ ] Arrays
-- [ ] Linked Lists
-- [ ] Stacks
-- [ ] Queues
+- [x] Arrays
+- [x] Linked Lists
+- [x] Stacks
+- [x] Queues
 - [ ] Trees
 - [ ] Graphs
